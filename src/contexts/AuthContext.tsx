@@ -20,7 +20,7 @@ const AuthContext = createContext({} as AuthContextType);
 
 const AuthContextProvider = ({ children }: AuthContextProviderProps) => {
     const [user, setUser] = useState<User>();
-    
+
     useEffect(() => {
         const unsubscribe = auth.onAuthStateChanged(user => {
             if (user) {
